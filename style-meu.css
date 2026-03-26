@@ -1,0 +1,284 @@
+/* ===== ESTILOS GERAIS ===== */
+/* Inspirados no menu inicial de uma plataforma de streaming como Netflix */
+
+/* BODY - Define os estilos da página inteira */
+body {
+    background-color: #141414; /* Define a cor de fundo escura (cinza bem escuro) */
+    color: white; /* Define a cor do texto padrão como branco */
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Define a fonte Helvetica como padrão */
+    margin: 0; /* Remove margens externas padrão */
+    padding: 0; /* Remove preenchimento externo padrão */
+    display: flex; /* Usa Flexbox para layout */
+    flex-direction: column; /* Organiza os elementos em coluna (um abaixo do outro) */
+    min-height: 100vh; /* Garante que o body tenha no mínimo a altura da viewport */
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+/* MAIN - Container principal que centraliza o conteúdo */
+main {
+    text-align: center; /* Centraliza todo o texto e conteúdo */
+    max-width: 800px; /* Define largura máxima de 800 pixels */
+    width: 90%; /* Usa 100% da largura disponível */
+    margin: 0 auto; /* Centraliza horizontalmente o main no body */
+    flex: 1; /* Faz o main ocupar todo espaço vertical disponível */
+    display: flex; /* Usa Flexbox para organizar seus filhos */
+    flex-direction: column; /* Organiza conteúdo em coluna */
+    justify-content: center; /* Centraliza verticalmente o conteúdo */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
+}
+
+/* ===== CABEÇALHO ===== */
+/* HEADER H1 - Estilo do título principal */
+header h1 {
+    font-size: 3rem; /* Define tamanho da fonte para 3 vezes o tamanho base */
+    margin-bottom: 2rem; /* Adiciona espaço de 2rem abaixo do título */
+    font-weight: 300; /* Define peso da fonte como light (mais fino) */
+}
+
+/* ===== SEÇÃO DE PERFIS ===== */
+/* PROFILES UL - Lista de perfis */
+.profiles ul {
+    list-style: none; /* Remove os pontos da lista */
+    padding: 0; /* Remove preenchimento interno */
+    display: flex; /* Usa Flexbox para organizar itens em linha */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 0.25rem; /* Espaçamento reduzido entre cada perfil */
+    flex-wrap: nowrap; /* Evita quebra de linha (todos em uma linha) */
+}
+
+/* PROFILE - Estilo individual de cada cartão de perfil */
+.profile {
+    /*background-color: #141414; /* Define fundo da mesma cor do body para integração visual */
+    border-radius: 8px; /* Cria cantos arredondados em 8 pixels */
+    padding: 0.4rem; /* Adiciona espaço interno de 0.25rem */
+    text-align: center; /* Centraliza o texto dentro do perfil */
+    cursor: pointer; /* Muda o cursor para pointer (mão) ao passar por cima */
+    transition: transform 0.3s, box-shadow 0.3s; /* Suaviza as transições em 0.3 segundos */
+    width: 170px; /* Define largura fixa de 170 pixels */
+}
+
+/* PROFILE:HOVER - Efeito ao passar o mouse sobre o perfil */
+.profile:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do perfil em 5% */
+}
+
+/* ===== IMAGENS DOS PERFIS ===== */
+/* PROFILE IMG - Estilo das imagens */
+.profile img {
+    width: 150px; /* Define largura da imagem em 150 pixels */
+    height: 150px; /* Define altura da imagem em 150 pixels (formato quadrado) */
+    border-radius: 50px; /* Arredonda os cantos em 50 pixels para efeito semi-circular */
+    margin-bottom: 0.5rem; /* Adiciona espaço de 0.5rem abaixo da imagem */
+    object-fit: cover; /* Garante que a imagem preencha o espaço proporcionalmente */
+    transition: box-shadow 0.3s; /* Suaviza a transição da sombra em 0.3 segundos */
+}
+
+/* ===== EFEITOS DE HOVER COLORIDOS - SOMBRAS INDIVIDUAIS ===== */
+/* Cada perfil tem uma cor de sombra única ao passar o mouse */
+
+/* PROFILE 1 (Robin) - Sombra azul */
+.profile:nth-child(1):hover img {
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.8); /* Adiciona sombra azul ao passar o mouse */
+}
+
+/* PROFILE 2 (Estelar) - Sombra rosa */
+.profile:nth-child(2):hover img {
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.8); /* Adiciona sombra rosa ao passar o mouse */
+}
+
+/* PROFILE 3 (Ravena) - Sombra lilás */
+.profile:nth-child(3):hover img {
+    box-shadow: 0 0 15px rgba(146, 82, 211, 0.8); /* Adiciona sombra lilás ao passar o mouse */
+}
+
+/* PROFILE 4 (Mutano) - Sombra turquesa */
+.profile:nth-child(4):hover img {
+    box-shadow: 0 0 15px rgba(26, 188, 126, 0.8); /* Adiciona sombra turquesa ao passar o mouse */
+}
+
+/* PROFILE 5 (Ciborgue) - Sombra verde-água */
+.profile:nth-child(5):hover img {
+    box-shadow: 0 0 15px rgba(32, 163, 178, 0.8); /* Adiciona sombra verde-água ao passar o mouse */
+}
+
+/* ===== TEXTO DOS PERFIS ===== */
+/* PROFILE P - Estilo do nome do perfil */
+.profile p {
+    margin: 0; /* Remove margens padrão */
+    font-size: 1.2rem; /* Define tamanho da fonte */
+    font-weight: 400; /* Define peso normal da fonte */
+}
+
+/* ===== RODAPÉ ===== */
+/* FOOTER - Estilo do rodapé da página */
+footer {
+    padding: 1.5rem; /* Adiciona espaço interno de 1.5rem */
+    text-align: center; /* Centraliza o texto */
+    font-size: 0.9rem; /* Define tamanho da fonte menor */
+    color: #888; /* Define cor cinzenta discreta para o texto */
+    border-top: 1px solid #333; /* Adiciona uma borda sutil no topo */
+    width: 100%; /* Ocupa 100% de largura disponível */
+    box-sizing: border-box; /* Inclui padding no cálculo da largura */
+}
+
+/* FOOTER P - Estilo do parágrafo no rodapé */
+footer p {
+    margin: 0; /* Remove margens padrão */
+}
+
+/* ===== SOMBRAS DINÂMICAS MAIS SUAVES AO REDOR DA PÁGINA ===== */
+/* Sombra baseada no perfil hoverado */
+body.shadow-robin {
+    box-shadow: inset 0 0 150px rgba(52, 152, 219, 0.35);
+}
+
+body.shadow-estelar {
+    box-shadow: inset 0 0 150px rgba(255, 20, 147, 0.35);
+}
+
+body.shadow-ravena {
+    box-shadow: inset 0 0 150px rgba(167, 93, 241, 0.416);
+}
+
+body.shadow-mutano {
+    box-shadow: inset 0 0 150px rgba(26, 188, 75, 0.35);
+}
+
+body.shadow-ciborg {
+    box-shadow: inset 0 0 150px rgba(32, 163, 178, 0.35);
+}
+
+/* ===== MEDIA QUERIES - RESPONSIVIDADE ===== */
+/* Estes estilos ajustam o layout para diferentes tamanhos de tela */
+
+/* TABLETS E TELAS PEQUENAS - Até 768 pixels de largura */
+@media (max-width: 768px) {
+    /* Reduz o tamanho do título em tablets */
+    header h1 {
+        font-size: 2.2rem; /* Reduz de 3rem para 2.2rem */
+        margin-bottom: 1.5rem; /* Reduz espaço abaixo do título */
+    }
+
+    /* Ajusta a lista de perfis para wrapping em tablets */
+    .profiles ul {
+        gap: 0.8rem; /* Reduz o espaço entre perfis */
+        flex-wrap: wrap; /* Permite quebra de linha se necessário */
+    }
+
+    /* Reduz dimensões dos perfis */
+    .profile {
+        width: 150px; /* Reduz largura de 180px para 150px */
+    }
+}
+
+/* ===== LIGHT MODE ===== */
+body.light-mode {
+    background-color: #f5f5f5; /* Fundo claro para o modo claro */
+    color: #1d1d1d;
+}
+
+body.light-mode header h1,
+body.light-mode .profile p,
+body.light-mode footer {
+    color: #1d1d1d;
+}
+/*
+body.light-mode .profile {
+    background-color: #f5f5f5;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}*/
+
+body.light-mode .profile img {
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+body.light-mode footer {
+    border-top-color: #ccc;
+}
+
+body.light-mode button#theme-toggle {
+    border-color: #1d1d1d;
+    background: none;
+    color: #1d1d1d;
+}
+
+/* ===== THEME TOGGLE BUTTON ===== */
+button#theme-toggle {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.profile, .profile img, footer {
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+    /* Reduz tamanho das imagens */
+    .profile img {
+        width: 100px; /* Reduz de 120px para 100px */
+        height: 100px; /* Reduz de 120px para 100px */
+    }
+
+    /* Reduz tamanho do nome do perfil */
+    .profile p {
+        font-size: 1rem; /* Reduz de 1.2rem para 1rem */
+    }
+
+    /* Ajusta o rodapé para tablets */
+    footer {
+        font-size: 0.8rem; /* Reduz tamanho da fonte */
+        padding: 1rem; /* Reduz preenchimento interno */
+    }
+
+
+/* CELULARES - Até 480 pixels de largura */
+@media (max-width: 480px) {
+    /* Reduz significativamente o tamanho do título em celulares */
+    header h1 {
+        font-size: 1.8rem; /* Reduz para 1.8rem em celulares */
+        margin-bottom: 1.2rem; /* Reduz espaço para economizar espaço */
+    }
+
+    /* Adiciona padding ao main para margens em celulares */
+    main {
+        padding: 1rem; /* Evita que conteúdo toque nas bordas */
+    }
+
+    /* Reduz espaço entre perfis em celulares */
+    .profiles ul {
+        gap: 0.6rem; /* Espaço reduzido entre perfis */
+    }
+
+    /* Reduz ainda mais as dimensões dos perfis */
+    .profile {
+        width: 130px; /* Mais compacto para celulares */
+        padding: 0.8rem; /* Reduz preenchimento interno */
+    }
+
+    /* Reduz bastante o tamanho das imagens */
+    .profile img {
+        width: 85px; /* Bem reduzido para celulares */
+        height: 85px; /* Bem reduzido para celulares */
+    }
+
+    /* Reduz tamanho do nome do perfil em celulares */
+    .profile p {
+        font-size: 0.9rem; /* Tamanho menor para economizar espaço */
+    }
+
+    /* Minimize o rodapé para celulares */
+    footer {
+        font-size: 0.75rem; /* Fonte muito pequena */
+        padding: 0.8rem; /* Preenchimento reduzido */
+    }
+
+    /* Remove margens do parágrafo no rodapé */
+    footer p {
+        margin: 0; /* Sem espaços extras */
+    }
+}
