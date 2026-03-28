@@ -57,6 +57,38 @@ header h1 {
     width: 170px; /* Define largura fixa de 170 pixels */
 }
 
+/* BOTÃO GERENCIAR PERFIS - Estilo principal */
+.manage-profiles {
+    margin-top: 2rem; /* Posiciona o botão um pouco mais abaixo dos perfis */
+}
+
+.botao-gerenciar {
+    background-color: #141414; /* mesma cor do fundo da página */
+    border: 1.5px solid #d3d3d3; /* mesma cor da fonte do footer */
+    color: #d3d3d3; /* mesma cor da fonte do footer */
+    font-family: inherit; /* mesma fonte da página */
+    font-weight: 700; /* negrito */
+    text-transform: uppercase; /* letras em MAIÚSCULAS */
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.botao-gerenciar a {
+    color: inherit; /* herda cor do botão */
+    text-decoration: none;
+    display: inline-block;
+}
+
+.botao-gerenciar:hover {
+    background-color: #d3d3d3; /* fundo vira cor da fonte */
+    color: #141414; /* fonte vira cor do fundo da página */
+}
+
+.botao-gerenciar:hover a {
+    color: inherit;
+}
+
 /* PROFILE:HOVER - Efeito ao passar o mouse sobre o perfil */
 .profile:hover {
     transform: scale(1.05); /* Aumenta o tamanho do perfil em 5% */
@@ -181,6 +213,22 @@ body.light-mode header h1,
 body.light-mode .profile p,
 body.light-mode footer {
     color: #1d1d1d;
+}
+
+/* BOTÃO GERENCIAR NO LIGHT MODE */
+body.light-mode .botao-gerenciar {
+    background-color: #f5f5f5; /* fundo igual ao fundo da página no light mode */
+    color: #1d1d1d; /* fonte igual à cor da página do dark mode */
+    border: 1.5px solid #1d1d1d; /* borda na cor da página do dark mode */
+}
+
+body.light-mode .botao-gerenciar:hover {
+    background-color: #1d1d1d; /* fundo na cor da página do dark mode */
+    color: #f5f5f5; /* fonte na cor do fundo da página no light mode */
+}
+
+body.light-mode .botao-gerenciar:hover a {
+    color: inherit;
 }
 /*
 body.light-mode .profile {
