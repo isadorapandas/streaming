@@ -4,6 +4,10 @@
 /* BODY - Define os estilos da página inteira */
 body {
     background-color: #141414; /* Define a cor de fundo escura (cinza bem escuro) */
+    background: 
+        linear-gradient(135deg, rgba(0, 0, 0, 0.75), rgba(20, 20, 20, 0.75)),
+        url('assets/titans.png') center/cover no-repeat;
+    background-attachment: fixed; /* Fixa a imagem para efeito paralax suave */
     color: white; /* Define a cor do texto padrão como branco */
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Define a fonte Helvetica como padrão */
     margin: 0; /* Remove margens externas padrão */
@@ -11,7 +15,9 @@ body {
     display: flex; /* Usa Flexbox para layout */
     flex-direction: column; /* Organiza os elementos em coluna (um abaixo do outro) */
     min-height: 100vh; /* Garante que o body tenha no mínimo a altura da viewport */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
+   
 
 /* ===== CONTEÚDO PRINCIPAL ===== */
 /* MAIN - Container principal que centraliza o conteúdo */
@@ -180,39 +186,23 @@ body.shadow-ciborg {
     box-shadow: inset 0 0 150px rgba(32, 163, 178, 0.35);
 }
 
-/* ===== MEDIA QUERIES - RESPONSIVIDADE ===== */
-/* Estes estilos ajustam o layout para diferentes tamanhos de tela */
-
-/* TABLETS E TELAS PEQUENAS - Até 768 pixels de largura */
-@media (max-width: 768px) {
-    /* Reduz o tamanho do título em tablets */
-    header h1 {
-        font-size: 2.2rem; /* Reduz de 3rem para 2.2rem */
-        margin-bottom: 1.5rem; /* Reduz espaço abaixo do título */
-    }
-
-    /* Ajusta a lista de perfis para wrapping em tablets */
-    .profiles ul {
-        gap: 0.8rem; /* Reduz o espaço entre perfis */
-        flex-wrap: wrap; /* Permite quebra de linha se necessário */
-    }
-
-    /* Reduz dimensões dos perfis */
-    .profile {
-        width: 150px; /* Reduz largura de 180px para 150px */
-    }
-}
-
 /* ===== LIGHT MODE ===== */
 body.light-mode {
-    background-color: #f5f5f5; /* Fundo claro para o modo claro */
-    color: #1d1d1d;
+    /*background-color: #f5f5f5; /* Fundo claro para o modo claro */
+    /*color: #1d1d1d; /* Cor do texto escura para o modo claro */
+    background-color: #f2f2f2;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.65), rgba(240, 240, 240, 0.65)),
+        url('assets/titans.png') center/cover no-repeat;
+    background-attachment: fixed;
+    color: #141414;
 }
 
 body.light-mode header h1,
 body.light-mode .profile p,
 body.light-mode footer {
     color: #1d1d1d;
+    font-weight: 600;
 }
 
 /* BOTÃO GERENCIAR NO LIGHT MODE */
@@ -258,9 +248,7 @@ button#theme-toggle {
     background: none;
 }
 
-body {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
+
 
 .profile, .profile img, footer {
     transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
@@ -283,6 +271,28 @@ body {
         padding: 1rem; /* Reduz preenchimento interno */
     }
 
+/* ===== MEDIA QUERIES - RESPONSIVIDADE ===== */
+/* Estes estilos ajustam o layout para diferentes tamanhos de tela */
+
+/* TABLETS E TELAS PEQUENAS - Até 768 pixels de largura */
+@media (max-width: 768px) {
+    /* Reduz o tamanho do título em tablets */
+    header h1 {
+        font-size: 2.2rem; /* Reduz de 3rem para 2.2rem */
+        margin-bottom: 1.5rem; /* Reduz espaço abaixo do título */
+    }
+
+    /* Ajusta a lista de perfis para wrapping em tablets */
+    .profiles ul {
+        gap: 0.8rem; /* Reduz o espaço entre perfis */
+        flex-wrap: wrap; /* Permite quebra de linha se necessário */
+    }
+
+    /* Reduz dimensões dos perfis */
+    .profile {
+        width: 150px; /* Reduz largura de 180px para 150px */
+    }
+}
 
 /* CELULARES - Até 480 pixels de largura */
 @media (max-width: 480px) {
